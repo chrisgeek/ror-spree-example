@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe RabbitMq::Producer do
+RSpec.describe Spree::RabbitMq::Producer do
   let(:exchange_name) { 'test_exchange' }
   let(:message) { { order_id: 123, status: 'created' } }
   let(:headers) { { 'object_type' => 'order', 'routing_key' => 'store' } }
